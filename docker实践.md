@@ -212,9 +212,19 @@ One case where it is appropriate to use bind mounts is during development, when 
 问题:为什么不直接启动新的主容器,然后干掉就主容器?端口占用问题?
 
 
+#### 入口层 ####
 
+前后端分离,需要再进行聚合:
 
+golang,nodejs:静态资源嵌入代码里
+java: web jar模式:版本化;动态处理;
 
+golang:可执行文件;虚拟文件系统;
+
+版本化的对应关系问题: 前后端分离后,版本的匹配问题.
+1 团队协作
+2 进行应用适配
+3 前端在后端的项目里,聚合运行.
 
 
 
