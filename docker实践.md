@@ -22,8 +22,6 @@
 容器层:docker宿主机,部署容器
 基础服务层: 数据库 中间件
 
-服务发现层作用:服务依赖,健康检查,自动重启
-
 containerpilot:容器间通讯问题(不支持跨语言流量调度处理);
 服务联调问题
 
@@ -214,12 +212,28 @@ One case where it is appropriate to use bind mounts is during development, when 
 问题:为什么不直接启动新的主容器,然后干掉就主容器?端口占用问题?
 
 
-
 #### 架构方案二 ####
 mesos + marathon + docker
 mesos: 提供伸缩性服务
 marathon: 集群初始化和控制
 docker:
+
+
+#### 入口层 ####
+
+前后端分离,需要再进行聚合:
+
+golang,nodejs:静态资源嵌入代码里
+java: web jar模式:版本化;动态处理;
+
+golang:可执行文件;虚拟文件系统;
+
+版本化的对应关系问题: 前后端分离后,版本的匹配问题.
+1 团队协作
+2 进行应用适配
+3 前端在后端的项目里,聚合运行.
+
+
 
 
 
