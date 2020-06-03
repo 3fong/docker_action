@@ -148,6 +148,7 @@ uptime robot:检测健康检查和断点
 new relic:服务器和应用程序监视服务.主要是服务器监视
 google analytics:网站分析跟踪工具
 statsd: 通过udp,tcp监听各种统计信息,包括计数器,定时器等;
+VictoriaMetrics: prometheus 集群的监控以及报警方案
 
 #### 调试技术 ####
 strace gbd /proc
@@ -234,12 +235,28 @@ golang:可执行文件;虚拟文件系统;
 3 前端在后端的项目里,聚合运行.
 
 
+openresty:解决统一域名,区分直销分销同时访问
+
+web: api调用和静态资源
+cookie存储状态,适配后续请求.
+考虑点:
+	第一次登录
+	后续登录
+
+
+单点登录:
+
+	支持标准:哪类标准,openid,oid,oauth2;
+	登录登出;
+	会话管理;
+	用户信息获取,不同库源;
+
+连库,数据库模型;
+openresty只是配置登录页面跳转;
 
 
 
-
-
-
+github flow
 
 
 
