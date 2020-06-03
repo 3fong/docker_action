@@ -56,7 +56,7 @@ containerpilot:容器间通讯问题(不支持跨语言流量调度处理);
 单元,集成,端对端测试 jmock   
 jenkins pipline
 drone.io
-heroku
+heroku https://devcenter.heroku.com/articles/procfile
 
 - 镜像仓库
 
