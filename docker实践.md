@@ -21,6 +21,7 @@
 集群层:集成宿主机 docker swarm flannl进行网络打通,便于集群部署
 容器层:docker宿主机,部署容器
 基础服务层: 数据库 中间件
+域名解析服务: Triton Container Name Service(选用)
 
 containerpilot:容器间通讯问题(不支持跨语言流量调度处理);
 服务联调问题
@@ -57,6 +58,8 @@ containerpilot:容器间通讯问题(不支持跨语言流量调度处理);
 jenkins pipline
 drone.io
 heroku https://devcenter.heroku.com/articles/procfile
+
+version reback???
 
 - 镜像仓库
 
@@ -260,13 +263,28 @@ github flow
 
 
 
+压测:
+核心点:出问题,不能看指标,指标是结果;要找原因.
+代码,调用链很复杂.工具只是辅助,要找到实际问题是什么.
+debug包 获取详细日志 
+
+
+perf:库级别调用链.应用层面还需要专门的工具进行分析.
 
 
 
+压测:
 
+逐渐加压,看看能到多少访问
+并发数,总访问量,keepalive
+获取瓶颈点,热点代码,便于分析和调整
+官方工具,debug包,通过火焰图分析具体请求
+wrk
+如果对于性能有要求,可以将tcp改成unit套接字,提高2,3倍性能
 
+热点代码分析:
 
-
+1 具体问题分析,如果是后端服务问题,就做lb,进行分流处理
 
 
 
