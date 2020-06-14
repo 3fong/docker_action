@@ -46,6 +46,11 @@ supervisord进行服务管理,不同服务部署在不同容器,每个容器一�
 supervisord控制台因为有多个容器,会存在多个,可以通过修改surpervisord的代码,将单用户改为多租户模式,或者nginx进行包装服务页面,做到服务聚合管理
 
 
+**线上更新方案:**
+
+jar包模式,jenkins pipline单独构建部分更新,supersisor进行reload
+
+
 
 #### 服务架构 ####
 分层:
