@@ -88,7 +88,17 @@ jenkins pipline
 drone.io
 heroku https://devcenter.heroku.com/articles/procfile
 
-version reback???
+version reback
+git 可以check执行提交版本,同时线上服务,可以备份上次执行jar包,已快速完成回退.
+
+集成测试:包括功能和负载测试两部分.
+
+功能测试
+
+负载测试
+
+
+
 
 - 镜像仓库
 
